@@ -1,0 +1,7 @@
+setup.py
+df_collector/__init__.py
+df_collector/df_collector.py
+df_collector.egg-info/PKG-INFO
+df_collector.egg-info/SOURCES.txt
+df_collector.egg-info/dependency_links.txt
+df_collector.egg-info/top_level.txt
