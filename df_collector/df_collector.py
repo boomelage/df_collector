@@ -14,7 +14,11 @@ class df_collector:
 		files = [f for f in os.listdir(datadir) if f.endswith('.csv')]
 		files = [os.path.join(datadir, f) for f in files]
 		dfs = Parallel(n_jobs=n_jobs)(delayed(self.collect_df)(f) for f in files)
-		return pd.concat(dfs,ignore_index=True)
+		if len(dfs)>0:
+			return pd.concat(dfs,ignore_index=True)
+		else:
+			print('no data available')
+			return None
 
 	def cboe_spx_barriers(self):
 		if self.root != None:
