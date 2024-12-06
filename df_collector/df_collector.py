@@ -30,7 +30,7 @@ class df_collector:
 
 	def cboe_spx_asians(self):
 		if self.root != None:
-			datadir = os.path.join(self.root,ms.cboe_spx_short_term_asians['dump'])
+			datadir = os.path.join(self.root,ms.cboe_spx_asians['dump'])
 			return self.collect_dfs(datadir)
 		else:
 			print('define the instance root!')
